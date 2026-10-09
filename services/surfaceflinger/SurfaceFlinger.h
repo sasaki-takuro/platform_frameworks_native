@@ -886,7 +886,7 @@ private:
             std::vector<std::pair<Layer*, sp<LayerFE>>>& layers);
 
     ftl::SharedFuture<FenceResult> renderScreenImpl(
-            const RenderArea*, const std::shared_ptr<renderengine::ExternalTexture>&,
+            std::shared_ptr<const RenderArea>, const std::shared_ptr<renderengine::ExternalTexture>&,
             bool regionSampling, bool grayscale, bool isProtected, ScreenCaptureResults&,
             std::optional<OutputCompositionState>& displayState,
             std::vector<std::pair<Layer*, sp<LayerFE>>>& layers);
